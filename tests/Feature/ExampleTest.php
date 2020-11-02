@@ -18,4 +18,17 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    // public function testProductsList()
+    //  {
+    //      $this->get(route('products'))
+    //           ->assertResponseOK();
+    // }
+    // public function testProductsList()
+    // {
+    //     $response = $this->get('products');
+
+    //     $response->assertStatus(200);
+    // }
+
 }
