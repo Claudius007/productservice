@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix'=>'api'], function(){
+Route::get('products',['as'=>'products', function(){
+    return App\Models\Product::all(); //elecquent magic - *select all from table and it returns.
+}]);
+});
