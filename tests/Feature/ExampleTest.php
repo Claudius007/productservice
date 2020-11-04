@@ -19,26 +19,11 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
     }
 
-    // /**
-    //  * A basic test example.
-    //  *
-    //  * @return void
-    //  */
-    // public function testProductsList()
-    //  {
-    //        $this->get(route('api.products.index'))
-    //             ->assertResponseOk();
-    // }
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
     public function testProductsList()
      {
-         $this->get('products.index')
+        $response = $this->get('/api/products');
 
-         ->assertStatus(200);
+        $response -> assertStatus(200);
 
      }
 
