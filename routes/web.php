@@ -17,8 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'=>'api'], function(){
-Route::get('products',['as'=>'products', function(){
-    return App\Models\Product::all(); //elecquent magic - *select all from table and it returns.
-}]);
-});
+// Route::group(['prefix'=>'api'], function(){
+//   //Route::get('products',['as'=>'products', function(){
+//     //  return App\Models\Product::all(); //elecquent magic - *select all from table and it returns.
+//   //}]);
+//       Route::resource('products','ProductController'::class, 'show');
+//   });
+
+
+
+
+// Route::prefix('api')->group(function(){
+//   Route::resource('products','App\Http\ProductController',['Only'=>['index','store','update']]);
+// });
